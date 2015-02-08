@@ -1,0 +1,12 @@
+<div id="centered">
+  <a href="http://www.aerobatic.com"><img class="logo" asset-src="images/diversiphied_logo.png"></a>
+  <h1>Contentful test</h1>
+</div>
+<div ng-repeat="entry in entries track by entry.sys.id" ng-controller="EntryController">
+  Entry {{entryTitle()}}
+  <ul>
+    <li ng-repeat="field in contentType().fields track by field.id">
+      {{field.name}}: {{entry.fields[field.id]}}
+    </li>
+  </ul>
+</div>
